@@ -1,0 +1,24 @@
+#outer{border: 10px solid blue; width: 500px; height: 500px; padding-left: 50px;margin: 50px;}
+
+.header1{
+    text-align: center;
+    color: solid black;
+    border-width: 10px;
+    border-color: solid black;
+    border-style: solid;
+    width: 400px;
+    height: 100px;
+    display: grid;
+    padding: 10px;
+    margin: 20px;
+}
+
+p{color: black;}
+
+.sizelen{
+    
+    width: 400px;
+    height: 100px;
+    
+}
+
