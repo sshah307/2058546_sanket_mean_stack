@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        div{text-align: center;}
+        img{height:110px; width:160px ; align-self: center;}
+        div.item{
+            height: 250px;
+            width: 350px;
+            border-radius: 20px; 
+            border-width: 3px;
+            background-color: blanchedalmond;
+        }
+    </style>
+    <script src="shoppingCart.js"></script>
+</head>
+<body>
+    <br>
+    <H1 style = "text-align: center;"> Welcome to Shopping Cart </H1>
+    <br>
+    <div class = "row">
+        <div class = "col-6">
+            <div>
+                <h5 style="display: inline-block;"> Items in Cart: </h5>
+                <h5 id="cartValue" style="display: inline-block;">0</h5>
+            </div>
+        </div>
+        <div class = "col-6">
+            <a href="checkoutPage.html">Checkout</a>
+        </div>
+    </div>
+    <!-- First row of cards -->
+    <div class="row justify-content-center" style = "margin-top: 30px; ">
+        <div class = "card item col-2" style="margin-inline: 5px; ">
+            PS 5 </br>
+            $500 </br>
+            <img src = "https://cdn.vox-cdn.com/thumbor/Vgy3FfpWvBD32CYZrcNq6itGqnw=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/20034840/ishMfuW.png"/> </br>
+            <button input="button" class = "btn btn-info" onclick="addCart('PS 5',500)">add</button>
+        </div>
+        <div class = "card item col-2" style="margin-inline: 5px; border-radius: 20px;">
+            PS 4 pro </br>
+            $300 </br>
+            <img src = "https://specials-images.forbesimg.com/imageserve/5e054fc425ab5d0007cf52ca/Sony-PS4-Pro-sale--PS4-Pro-deal--Best-PS4-deal--PS4-Slim-deal--Best-PS4-deal-/960x0.jpg?fit=scale"/> </br>
+            <button input="button" class = "btn btn-info" onclick="addCart('PS 4 pro',300)">add</button>
+        </div>
+    </div>
+
+    <!-- Second row of cards -->
+    <div class="row justify-content-center" style = "margin-top: 10px;">
+        <div class = "card item col-2" style="margin-inline: 5px; border-radius: 20px;">
+            Xbox X </br>
+            $500 </br>
+            <img src = "https://media.wired.com/photos/5fa5dc3dba670daaf8e97a8d/master/pass/games_gear_series-x.jpg"/> </br>
+            <button input="button" class = "btn btn-info" onclick="addCart('Xbox X',500)">add</button>
+        </div>
+        <div class = "card item col-2" style="margin-inline: 5px; border-radius: 20px;">
+            Xbox S </br>
+            $300 </br>
+            <img src = "https://i5.walmartimages.com/asr/3559c784-6860-4524-a206-1a713c0b2e73.ffb076348e19c4dd9ebb9d590bc635f9.jpeg"/> </br>
+            <button input="button" class = "btn btn-info" onclick="addCart('Xbox S',300)">add</button>
+        </div>
+    </div>
+
+    <script>setInitialCount()</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
