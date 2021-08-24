@@ -1,0 +1,66 @@
+<!--Login Page Part-->
+
+<div *ngIf = "loginPage">
+    <h2>Login Form</h2>
+    <form #loginRef="ngForm" 
+    (ngSubmit)="checkUser(loginRef)">
+    <label>User Name </label>
+    <input type="text" name="user" ngModel required/><br/>
+    <label>Password </label>
+    <input type="password" name="pass" ngModel required/><br/><br/><br/>
+    <input type="submit" value="submit" [disabled]="!loginRef.valid"/>
+    </form>
+    <br/>
+    {{msg}}
+    <br>
+    <h5>Register here, if you haven't before</h5>
+    <a href="#" (click)="switchPage(1)">Register</a>
+</div>
+
+<!--Sign Up Part-->
+
+<div *ngIf = "signupPage">
+    <h2>Registration Form</h2>
+    <form #regsitrationDetails="ngForm" 
+    (ngSubmit)="newRegUser(regsitrationDetails)">
+    <label>First Name </label>
+    <input type="text" name="first" ngModel required/><br/>
+    <label>Last Name </label>
+    <input type="text" name="last" ngModel required/><br/>
+    <label>User Name </label>
+    <input type="text" name="user" ngModel required/><br/>
+    <label>Password </label>
+    <input type="password" name="pass" ngModel required/><br/><br/>
+    <input type="submit" value="submit" [disabled]="!regsitrationDetails.valid"/>
+    <input type="reset"/><br/>
+    </form>
+    <br/>
+    {{msg}}
+    <br>
+    <a href="#" (click)="switchPage(0)">Login</a>
+</div>
+
+
+<!--Contact Details Part-->
+
+
+<div *ngIf = "contactDetailsPage">
+    <h2>Titan Portfolio</h2>
+    <h3>Welcome {{existing_user}}!</h3>
+    <a href="#" (click)="switchPage(0)">Logout</a>
+    <br>
+    <form #contactDet="ngForm"
+    (ngSubmit)="newContact(contactDet)">
+    <label>Contact Name: </label>
+    <input type="text" name="name" ngModel required/><br/>
+    <label>Phone Number: </label>
+    <input type="number" name="number" ngModel required/><br/><br/>
+    <input type="submit" value="save" [disabled]="!contactDet.valid"/>
+    </form>
+    <br>
+    {{msg}}
+    <br>
+    <br>
+    <div [innerHTML]="table_content" style="text-align: left;">
+    </div>  
+</div>
