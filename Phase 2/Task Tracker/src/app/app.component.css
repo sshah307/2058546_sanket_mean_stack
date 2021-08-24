@@ -1,0 +1,25 @@
+h1 {
+  text-align: center;
+  background-color: rgb(222, 135, 135);
+  padding: 20px;
+  margin-top: 0px;
+}
+
+h3 {
+  text-align: center;
+}
+
+div {
+  width: 50%;
+  margin: auto;
+  padding: 50px;
+  border: 1px solid rgb(255, 235, 192);
+}
+
+button {
+  margin-right: 10px;
+}
+
+#tasksform {
+  text-align: center;
+}
