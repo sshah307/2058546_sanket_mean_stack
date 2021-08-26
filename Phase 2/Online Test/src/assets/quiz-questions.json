@@ -1,0 +1,52 @@
+[
+  {
+    "question": "The property in CSS used to change the background color of an element is ?",
+    "correct_answer": "background-color",
+    "incorrect_answers": ["bgcolor", "color", "All of the above"]
+  },
+  {
+    "question": "The property in CSS used to change the text color of an element is?",
+    "correct_answer": "color",
+    "incorrect_answers": ["bgcolor", "background-color", "All of the above"]
+  },
+  {
+    "question": "The HTML attribute used to define the inline styles is?",
+    "correct_answer": "style",
+    "incorrect_answers": ["styles", "class", "None of the above"]
+  },
+  {
+    "question": "Which of the following CSS property is used to set the background image of an element?",
+    "correct_answer": "background-image",
+    "incorrect_answers": ["background-attachment", "background-color", "None of the above"]
+  },
+  {
+    "question": "Are the negative values allowed in padding property?",
+    "correct_answer": "No",
+    "incorrect_answers": ["Yes", "Can't say", "May be"]
+  },
+  {
+    "question": "The CSS property used to specify the transparency of an element is?",
+    "correct_answer": "opacity",
+    "incorrect_answers": ["overlay", "filter", "visibility"]
+  },
+  {
+    "question": "The CSS property used to draw a line around the elements outside the border?",
+    "correct_answer": "text-overflow",
+    "incorrect_answers": ["text-shadow", "text-stroke", "text-decoration"]
+  },
+  {
+    "question": "Which of the following CSS property is used to set the blend mode for each background layer of an element?",
+    "correct_answer": "background-blend-mode property",
+    "incorrect_answers": ["background-collapse property", "background-transform property", "background-origin property"]
+  },
+  {
+    "question": "Which of the following CSS property is used to specify the type of quotation mark?",
+    "correct_answer": "quotes property",
+    "incorrect_answers": ["z-index property", "hyphens property", "None of the above"]
+  },
+  {
+    "question": "The CSS property used to specify the order of flex item in the grid container is?",
+    "correct_answer": "order property",
+    "incorrect_answers": ["float property", "overflow property", "None of the above"]
+  }
+]

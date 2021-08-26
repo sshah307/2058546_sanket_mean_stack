@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="main">
+    <div class="header">
+      <h1>Online Test Application</h1><br/>
+      <h3>INSTRUCTIONS</h3>
+      <h4>Answer all the questions before submitting your exam.</h4><br/>
+    </div>
+    <div class="questions-container">
+      <form [formGroup]="myForm" (ngSubmit)="submit()">
+        <div *ngFor="let q of allQuestions; let i = index">
+          <p>{{ i + 1 }}. {{ q.question }}</p>
+          <input
+            type="radio"
+            formControlName="{{ q.question }}"
+            value="{{ q.correct_answer }}"
+          />
+          <label for="{{ q.correct_answer }}" id="{{ q.correct_answer }}">{{
+            q.correct_answer
+          }}</label>
+          <div *ngFor="let o of q.incorrect_answers">
+            <input
+              type="radio"
+              formControlName="{{ q.question }}"
+              value="{{ o }}"
+            />
+            <label for="{{ o }}" id="{{ o }}">{{ o }}</label>
+          </div>
+          <hr />
+        </div>
+        <br>
+        <input
+          mat-flat-button
+          color="primary"
+          type="submit"
+          value="submit"
+          [disabled]="!myForm.valid || click"
+        />
+        <br>
+      </form>
+      <div *ngIf="displayScore">
+        <br>
+        <h2>
+          You scored {{ score }} out of {{ testLength }} = {{ (score / testLength) * 100 }}%
+        </h2>
+        <br />
+      </div>
+    </div>
+  </div>
+</div>

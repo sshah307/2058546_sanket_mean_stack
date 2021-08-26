@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+}
+.main {
+}
+
+label {
+  display: inline-block;
+  width: 600px;
+}
+
+div {
+  background-color: rgb(122, 246, 255);
+  text-align: center;
+}
+
+h1 {
+  width: 500px;
+  margin: 0 auto;
+  color: chocolate;
+  text-align: center;
+}
+
+h3 {
+  width: 500px;
+  margin: 0 auto;
+  color: chocolate;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+input {
+  text-align: center;
+}
