@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+
+        socket.on("status", (msg) =>
+        {
+            document.getElementById("status").innerHTML = msg;
+        });
+
+        function updateCourse()
+        {
+            let courseId = document.getElementById("courseId").value;
+            let amount = document.getElementById("amount").value;
+
+            let course =
+            {
+                _id: courseId,
+                amount: amount
+            };
+
+            if(course._id == "" ||
+                course.amount == "")
+            { document.getElementById("status").innerHTML = "One of the fields is empty!"; return;}
+
+            document.getElementById("courseId").value = "";
+            document.getElementById("amount").value = "";
+
+            socket.emit("updateCourse", course);
+        }
+    </script>
+    <title>Update Course</title>
+</head>
+<body>
+    <h2>Update Course</h2>
+    <p id="status"></p>
+    <label>Course ID:</label>
+    <input type="text" id="courseId"><br>
+    <br>
+    <label>Amount:</label>
+    <input type="text" id="amount"><br>
+    <br>
+    <button type="button" onclick="updateCourse()">Submit</button><br>
+    <br>
+    <a href="/">Home</a>
+</body>
